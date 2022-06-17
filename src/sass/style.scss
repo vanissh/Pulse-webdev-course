@@ -1,0 +1,22 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import 'base/fonts';
+@import 'base/variables';
+@import 'blocks/button';
+@import 'blocks/title';
+
+
+* {
+    font-family: 'Museo Moderno', sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+@import 'blocks/promo';
+@import 'blocks/header';
+@import 'blocks/benefit';
+@import 'blocks/consultation';
+@import 'blocks/forms';
+@import 'base/media';

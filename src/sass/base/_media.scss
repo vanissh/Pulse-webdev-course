@@ -1,0 +1,39 @@
+@media (max-width: 1200px){
+    .title_left {
+        text-align: center;
+    }
+    .consultation {
+        text-align: center;
+    }
+    .feed-form {
+        margin: 0 auto;
+    }
+    .promo {
+        &__wrapper {
+            align-items: center;
+        }
+    }
+    .header {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 767px){
+    .benefit {
+        &__icons {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__icon {
+            max-width: 70%;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .feed-form {
+        width: 70%;
+    }
+}
+
+

@@ -1,0 +1,30 @@
+.button {
+    display: block;
+    background: $main_color;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    &_big {
+        margin-top: 65px;
+        height: 54px;
+        width: 303px;
+        padding: 12px 28px;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    &_small {
+        font-size: 12px;
+        margin-top: 4px;
+        padding: 6px 8px 7px 5px;
+    }
+    &_submit {
+        width: 100%;
+        height: 58px;
+        padding: 17px 30px 16px 29px;
+        font-size: 16px;
+    }
+}
