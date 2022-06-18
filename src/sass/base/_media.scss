@@ -18,6 +18,17 @@
     }
 }
 
+@media (max-width: 991px){
+    // .carousel {
+    //     &__inner {
+    //         width: 600px;
+    //     }
+    //     &__img {
+    //         width: 500px;
+    //     }
+    // }
+}
+
 @media (max-width: 767px){
     .benefit {
         &__icons {
@@ -28,6 +39,7 @@
             max-width: 70%;
         }
     }
+
 }
 
 @media (max-width: 575px) {
