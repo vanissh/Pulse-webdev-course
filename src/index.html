@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/tiny-slider.css">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="js/tiny-slider.js" defer></script>
@@ -124,12 +125,12 @@
         <div class="container">
             <div class="title title_light">Каталог пульсометров</div>
             <div class="catalog__tabs">
-                <div class="catalog__tab"><span>для фитнеса</span></div>
-                <div class="catalog__tab"><span>для бега</span></div>
-                <div class="catalog__tab"><span>для триатлона</span></div>
+                <div class="catalog__tab" id="fitness"><span>для фитнеса</span></div>
+                <div class="catalog__tab" id="run"><span>для бега</span></div>
+                <div class="catalog__tab" id="triathlon"><span>для триатлона</span></div>
             </div>
             <div class="catalog__products">
-                <div class="card">
+                <div class="card card-fitness">
                    <div class="card__wrapper">
                         <div class="card__front-side">
                             <img src="img/pulsometer.jpg" alt="pulsometer" class="card__img">
@@ -158,7 +159,7 @@
                         <button class="button button_buy">купить</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-fitness">
                    <div class="card__wrapper">
                         <div class="card__front-side">
                             <img src="img/pulsometer.jpg" alt="pulsometer" class="card__img">
@@ -187,7 +188,7 @@
                         <button class="button button_buy">купить</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-run">
                    <div class="card__wrapper">
                         <div class="card__front-side">
                             <img src="img/pulsometer.jpg" alt="pulsometer" class="card__img">
@@ -216,7 +217,7 @@
                         <button class="button button_buy">купить</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-run">
                    <div class="card__wrapper">
                         <div class="card__front-side">
                             <img src="img/pulsometer.jpg" alt="pulsometer" class="card__img">
@@ -245,7 +246,7 @@
                         <button class="button button_buy">купить</button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card card-triathlon">
                    <div class="card__wrapper">
                         <div class="card__front-side">
                             <img src="img/pulsometer.jpg" alt="pulsometer" class="card__img">

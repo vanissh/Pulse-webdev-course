@@ -9,9 +9,6 @@
     margin-right: 17px;
     background: #FFFFFF;
     border: 2px solid #E8E8E8;
-    &:nth-child(3n+3), &:nth-last-child(1) {
-        margin-right: 0;
-    }
     &__divider {
     width: 263px;
     height: 1px;

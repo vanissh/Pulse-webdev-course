@@ -26,6 +26,25 @@ document.querySelector('.next').addEventListener('click', function () {
 });
 
 //catalog
+
+const tabs = document.querySelectorAll('.catalog__tab'),
+  cards = document.querySelectorAll('.card')
+
+let activeID
+
+const showCards = (id) => {
+  if(id){
+    cards.forEach(card => 
+      card.classList.contains(`card-${id}`)? 
+        (card.style.display = 'flex'): 
+        card.style.display = 'none'
+    )
+    return
+  }
+
+  cards.forEach(card => card.style.display = 'flex')
+}
+
 document.querySelector('.catalog').addEventListener('click', (e) => {
   let target = e.target;
 
@@ -36,5 +55,25 @@ document.querySelector('.catalog').addEventListener('click', (e) => {
   if(target.closest('.card__back')){
     target.closest('.card').classList.remove('card-active')
   }
+
+  if(target.closest('.catalog__tab')){
+
+    const tab = target.closest('.catalog__tab')
+
+    tabs.forEach(item => 
+      item !== tab ? 
+        item.classList.remove('catalog__tab-active') : 
+        item.classList.toggle('catalog__tab-active')
+    )
+    
+    if(tab.classList.contains('catalog__tab-active')){
+      activeID = tab.id
+      showCards(activeID)
+    } else {
+      showCards()
+    }
+  }
 })
+
+
 

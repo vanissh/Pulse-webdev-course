@@ -17,6 +17,7 @@
         border: 2px solid #D0D0D0;
         transform: skew(-30deg);
         transition: all 0.5s;
+        cursor: pointer;
         span {
             display: block;
             transform: skew(29deg);
@@ -24,6 +25,10 @@
             font-size: 18px;
             text-transform: uppercase;
             color: $second-color;
+        }
+        &:hover {
+            box-shadow: 1px 1px 10px $main-color;
+            border: none;
         }
         &-active {
             border: none;
