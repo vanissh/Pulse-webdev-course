@@ -1,9 +1,5 @@
 .carousel {
     padding: 81px 0px;
-    &__inner {
-        width: 750px;
-        margin: 0 auto;
-    }
     .prev, .next {
         position: absolute;
         top: 50%;
@@ -17,15 +13,16 @@
         }
     }
     .prev {
-        left: -66px;
+        left: 0px;
     }
     .next {
-        right: -66px;
+        right: 0px;
     }
     .tns-item {
         img {
             display: block;
             margin: 0 auto;
+            width: 750px;
         }
     }
 }
