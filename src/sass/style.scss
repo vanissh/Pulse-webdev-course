@@ -9,6 +9,10 @@
     font-family: 'Museo Moderno', sans-serif;
 }
 
+body {
+    position: relative;
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -24,5 +28,7 @@
 @import 'blocks/card';
 @import 'blocks/catalog';
 @import 'blocks/footer';
+@import 'blocks/overlay';
+@import 'blocks/modal';
 
 @import 'base/media';

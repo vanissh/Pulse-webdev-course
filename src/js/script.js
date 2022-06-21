@@ -35,7 +35,7 @@ let activeID
 const showCards = (id) => {
   if(id){
     cards.forEach(card => 
-      card.classList.contains(`card-${id}`)? 
+      card.classList.contains(`card_${id}`)? 
         (card.style.display = 'flex'): 
         card.style.display = 'none'
     )
@@ -49,11 +49,11 @@ document.querySelector('.catalog').addEventListener('click', (e) => {
   let target = e.target;
 
   if(target.closest('.card__more')){
-    target.closest('.card').classList.add('card-active')
+    target.closest('.card').classList.add('card_active')
   }
 
   if(target.closest('.card__back')){
-    target.closest('.card').classList.remove('card-active')
+    target.closest('.card').classList.remove('card_active')
   }
 
   if(target.closest('.catalog__tab')){
@@ -62,16 +62,45 @@ document.querySelector('.catalog').addEventListener('click', (e) => {
 
     tabs.forEach(item => 
       item !== tab ? 
-        item.classList.remove('catalog__tab-active') : 
-        item.classList.toggle('catalog__tab-active')
+        item.classList.remove('catalog__tab_active') : 
+        item.classList.toggle('catalog__tab_active')
     )
     
-    if(tab.classList.contains('catalog__tab-active')){
+    if(tab.classList.contains('catalog__tab_active')){
       activeID = tab.id
       showCards(activeID)
     } else {
       showCards()
     }
+  }
+})
+
+//modal
+
+document.addEventListener('click', e => {
+  let target = e.target
+
+  if(target.closest('[data-modal="order"]')){
+    const name = target.closest('.card').querySelector('.card__title').textContent
+
+    document.querySelector('.overlay').style.display = 'block'
+    document.querySelector('#order').style.display = 'flex'
+    document.querySelector('#order .modal__descr').textContent = name
+  }
+
+  if(target.closest('[data-modal="consultation"]')){
+    document.querySelector('.overlay').style.display = 'block'
+    document.querySelector('#consultation').style.display = 'flex'
+  }
+
+  if(target.matches('.overlay')){
+   document.querySelector('.overlay .modal').style.display = 'none'
+   document.querySelector('.overlay').style.display = 'none'
+  }
+
+  if(target.closest('.modal__close')){
+   document.querySelector('.modal').style.display = 'none'
+   document.querySelector('.overlay').style.display = 'none'
   }
 })
 
